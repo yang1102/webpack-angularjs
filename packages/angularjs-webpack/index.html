@@ -6,6 +6,10 @@
         <title>Webpack Demo</title>
     </header>
     <div ng-app="webpack-demo">
+        <div ng-controller="appController">
+            {{value}}
+            <input type="button" value="add value" ng-click="onClick(14)">
+        </div>
         <webpack-demo></webpack-demo>
     </div>
 </html>

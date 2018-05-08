@@ -1,11 +1,10 @@
-const path = require('path');
+const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: {
-    myapp: ['./app/index.js', './app/demo.controller.js']
-  },
+  mode: 'production',
+  entry: './app/index.js',
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist'
@@ -15,11 +14,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.html'
-    }),
+    })
   ],
   output: {
     filename: '[name]_bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: resolve(__dirname, 'dist')
   },
   module: {
     rules: [

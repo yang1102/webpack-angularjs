@@ -1,0 +1,18 @@
+{
+  "name": "angularjs-webpack",
+  "version": "1.0.0",
+  "description": "build angularjs app with webpack",
+  "main": "index.js",
+  "author": "Shuoyi Yang",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --open"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

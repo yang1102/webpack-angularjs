@@ -1,4 +1,3 @@
-import app from './index';
 import template from './demo.html';
 
 class AppController {
@@ -12,8 +11,7 @@ class AppController {
 }
 
 AppController.$inject = ['$scope'];
-app.component('webpackDemo', {
+export const WebpackDemoCompoonent = {
   template,
   controller: AppController,
-});
-
+};
