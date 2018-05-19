@@ -5,6 +5,8 @@ const { resolve } = require('path');
 
 gulp.task('build', buildPackage);
 buildPackage.description = 'build package';
+gulp.task('build', buildPackage);
+buildPackage.description = 'build package';
 
 function executeCommand(command, cwd) {
   const build = spawn('yarn.cmd', ['run', command], {cwd});
@@ -29,4 +31,3 @@ function buildPackage() {
     executeCommand('build', resolve(__dirname, filePath));
   });
 }
-
